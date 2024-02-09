@@ -1,2 +1,2 @@
 # C
-based on tutorial, learn C.
+based on tutorial, learn C.s
