@@ -31,6 +31,8 @@ int main(){
     %.1f= just .0 
     %.0f= just .
     %lf = doubles
+    %1  = minimum field width
+    %-  = left align
     */
 
     return 0;
