@@ -8,7 +8,7 @@ int main(){
     // automatic int
     short age = 16;
     
-    float pi = 3.14;
+    const float pi = 3.14;
     
     //already signed
     char grade = 'A';
