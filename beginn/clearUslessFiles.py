@@ -1,7 +1,7 @@
 import os
 from glob import glob
 def main():
-    for file in glob('*'):
+    for file in glob('*.exe'):
         if not '.' in file:
             os.remove(file)
 
