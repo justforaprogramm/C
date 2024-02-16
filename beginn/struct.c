@@ -18,6 +18,7 @@ int main(void){
     */
 
     struct Player player1 ={.name[0]="BRO",.name[1]="Code",.score=4};
+    //struct Player player1 ={"BRO","Code",4};
     struct Player player2;
 
     strcpy(player2.name[0], "BRa");
