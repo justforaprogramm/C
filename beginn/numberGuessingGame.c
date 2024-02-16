@@ -31,8 +31,7 @@ int main(void)
 
     gentnum = generate_num(min_gn, max_gn);
 
-    do{}
-    while( false == printit(guess(),gentnum)); 
+    while( false == printit(guess(),gentnum)){};
 
     return 0;
 }
@@ -40,7 +39,7 @@ int main(void)
 int generate_num(int min, int max)
 {
     srand(time(0));
-    return (rand() % max) + min; 
+    return (rand() % (max - min)) + 1 + min; 
 }
 
 int guess()
