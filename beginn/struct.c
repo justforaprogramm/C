@@ -3,7 +3,7 @@
 
 struct Player
 {
-    char name[12];
+    char name[2][12];
     int score;
 };
 
@@ -17,18 +17,16 @@ int main(void){
             VERY SIMILAR to classes in other languages (but no methods)
     */
 
-    struct Player player1;
+    struct Player player1 ={.name[0]="BRO",.name[1]="Code",.score=4};
     struct Player player2;
-    
-    strcpy(player1.name, "BRO");
-    player1.score = 4;
 
-    strcpy(player2.name, "BRa");
+    strcpy(player2.name[0], "BRa");
     player2.score = 5;
 
-    printf("%s\n",player1.name);
+    printf("%s\n",player1.name[0]);
+    printf("%s\n",player1.name[1]);
     printf("%d\n",player1.score);
-    printf("%s\n",player2.name);
+    printf("%s\n",player2.name[0]);
     printf("%d\n",player2.score);
 
     return 0;
