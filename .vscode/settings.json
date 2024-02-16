@@ -1,6 +1,7 @@
 {
   "files.associations": {
-    "HELLO_WORLD.C": "cpp"
+    "HELLO_WORLD.C": "cpp",
+    "ctype.h": "c"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
