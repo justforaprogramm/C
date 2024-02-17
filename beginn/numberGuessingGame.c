@@ -6,32 +6,19 @@
 int generate_num(int min, int max);
 int guess();
 bool printit(int guess, int gen);
+void value_scan(int *min_gn, int *max_gn);
+void valid_value(int *min_gn, int *max_gn);
 
 int main(void)
 {   
-    int gentnum;
-    int min_gn;
-    int max_gn;
+    int gent_num, min_gn, max_gn;
 
-    printf("\nnumber guessing game, from Min(>0) to Max(<10000): ");
-    
-    printf("\nNumber Min: ");
-    scanf("%d", &min_gn);
+    value_scan(&min_gn, &max_gn);
+    valid_value(&min_gn, &max_gn);
 
-    printf("\nNumber Max: ");
-    scanf("%d", &max_gn);
+    gent_num = generate_num(min_gn, max_gn);
 
-    if(min_gn < 0) min_gn = 0;
-    if(max_gn > 10000) max_gn = 10000;
-    if(min_gn > max_gn)
-    {
-        min_gn = 0;
-        max_gn = 10000;
-    }
-
-    gentnum = generate_num(min_gn, max_gn);
-
-    while( false == printit(guess(),gentnum)){};
+    while(false == printit(guess(),gent_num)){};
 
     return 0;
 }
@@ -47,6 +34,7 @@ int guess()
     int guesses;
     printf("\n\r**************\n\rGuess a number: ");
     scanf("%d", &guesses);
+
     return guesses;
 }
 
@@ -56,12 +44,12 @@ bool printit(int guess, int gen)
 
     if(guess < gen)
     {
-        printf("\nto low number!\n**************\n\r");
+        printf("\nto low number!\n\r");
         numberfound = false;
     }
     else if (guess > gen)
     {
-        printf("\nto high number!\n**************\n\r");
+        printf("\nto high number!\n\r");
         numberfound = false;
     }
     else
@@ -70,4 +58,24 @@ bool printit(int guess, int gen)
         numberfound = true;
     }
     return numberfound;
+}
+
+void value_scan(int *min, int *max){
+    printf("\nnumber guessing game, from Min(>0) to Max(<10000): ");
+    
+    printf("\nNumber Min: ");
+    scanf("%d", &*min);
+
+    printf("\nNumber Max: ");
+    scanf("%d", &*max);
+}
+
+void valid_value(int *min, int *max){
+    if(*min < 0) *min = 0;
+    if(*max > 10000) *max = 10000;
+    if(*min > *max)
+    {
+        *min = 0;
+        *max = 10000;
+    }
 }
