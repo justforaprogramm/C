@@ -6,11 +6,9 @@ void printArray(double a[], int size_a);
 
 int main(void)
 {
-    double prices[] = {25, 5, 10, 7, 15, 20};
+    double prices[] = {1, 2, 69, 3, 420,10.5 ,20, 5, 21, 23, 42};
 
     int size_price = sizeof(prices) / sizeof(prices[0]);
-
-    printArray(prices, size_price);
 
     sort(prices, size_price, 0);
 

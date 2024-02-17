@@ -23,6 +23,27 @@ int main(void)
     return 0;
 }
 
+
+void value_scan(int *min, int *max){
+    printf("\nnumber guessing game, from Min(>0) to Max(<50000): ");
+    
+    printf("\nNumber Min: ");
+    scanf("%d", &*min);
+
+    printf("\nNumber Max: ");
+    scanf("%d", &*max);
+}
+
+void valid_value(int *min, int *max){
+    if(*min < 0) *min = 0;
+    if(*max > 50000) *max = 50000;
+    if(*min > *max)
+    {
+        *min = 0;
+        *max = 50000;
+    }
+}
+
 int generate_num(int min, int max)
 {
     srand(time(0));
@@ -34,6 +55,7 @@ int guess()
     int guesses;
     printf("\n\r**************\n\rGuess a number: ");
     scanf("%d", &guesses);
+    printf("\t");
 
     return guesses;
 }
@@ -58,24 +80,4 @@ bool printit(int guess, int gen)
         numberfound = true;
     }
     return numberfound;
-}
-
-void value_scan(int *min, int *max){
-    printf("\nnumber guessing game, from Min(>0) to Max(<10000): ");
-    
-    printf("\nNumber Min: ");
-    scanf("%d", &*min);
-
-    printf("\nNumber Max: ");
-    scanf("%d", &*max);
-}
-
-void valid_value(int *min, int *max){
-    if(*min < 0) *min = 0;
-    if(*max > 10000) *max = 10000;
-    if(*min > *max)
-    {
-        *min = 0;
-        *max = 10000;
-    }
 }
