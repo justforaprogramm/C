@@ -1,9 +1,12 @@
 # programmieren in dhbw kurs: programmieren1
+```
+Projectvorschläge
 
-1) 
-as Ergebnis von
-12 durch 4 ist
-3
+3) kontaktverwaltungssystem
 
-3) 
-4 + 7 / 2 = 7
+Einfaches kontaktbuch mit funktionen zum speichern von namen, telefonnummern, email, such- und bearbeitungsfunktion
+
+4) Terminal-basiertes spiel (Snake/tick-tac-toe)
+
+Entwicklung eines klassischen Terminal-Spiels (z.B. Snake oder Tic-tac-toe mit "KI"-Gegner)
+```
