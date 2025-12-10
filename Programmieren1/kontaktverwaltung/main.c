@@ -2,33 +2,14 @@
  * COPYRIGHT Benjamin Schmid <inf25189@lehre.dhbw-stuttgart.de>
  */
 
-#include <stdio.h>
-#include <stdbool.h>
-#include <string.h>
-
-/**
- * defines
- */
-//#define DEBUG
-#define HELP_LINE 28
-#define INPUT_BUFFER 50
-
-/**
- * private functions
- */
-int help();
-int add();
-int edit();
-int delete();
-int getContacts();
-int getContact();
-int giveAnswer(char[INPUT_BUFFER]);
+ #include "main.h"
 
 /**
  * manages input
  */
 int main(int argc, char *argv[])
 {
+    sqlite();
     if(argc > 1)
     {
         #ifdef DEBUG
@@ -87,7 +68,7 @@ int giveAnswer(char in[INPUT_BUFFER])
     else if(!strcmp("getContact", in)) (void)getContact();
     else if(!strcmp("add", in)) (void)add();
     else if(!strcmp("edit", in)) (void)edit();
-    else if(!strcmp("delete", in)) (void)delete();
+    else if(!strcmp("remove", in)) (void)removeContact();
     else (void)printf("type help for help!\n");
     return exit ? 1 : 0;
 }
@@ -95,7 +76,7 @@ int giveAnswer(char in[INPUT_BUFFER])
 /**
  * displays help in terminal
  */
-int help()
+int help(void)
 {
     (void)printf("help text:\n");
     for(int i=0;i<HELP_LINE;i++) (void)printf("-"); 
@@ -113,7 +94,7 @@ int help()
 /**
  * adds a kontakt with info
  */
-int add()
+int add(void)
 {
     (void)printf("add text\n");
     return 0;
@@ -122,7 +103,7 @@ int add()
 /**
  * edit a contact
  */
-int edit()
+int edit(void)
 {
     (void)printf("edit text\n");
     return 0;
@@ -131,16 +112,16 @@ int edit()
 /**
  * delete a contact
  */
-int delete()
+int removeContact(void)
 {
-    (void)printf("delete text\n");
+    (void)printf("removeContact text\n");
     return 0;
 }
 
 /**
  * gets all infos about a contacts
  */
-int getContacts()
+int getContacts(void)
 {
     (void)printf("Contactinfo text\n");
     return 0;
@@ -149,7 +130,7 @@ int getContacts()
 /**
  * gets all infos about a contact
  */
-int getContact()
+int getContact(void)
 {
     (void)printf("Contactinfo text\n");
     return 0;

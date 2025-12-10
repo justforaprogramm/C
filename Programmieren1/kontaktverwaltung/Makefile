@@ -5,14 +5,16 @@ CFLAGS = -Wall -Wextra -O2
 # Target executable
 TARGET = main
 # Source file
-SRC = main.c
+SRC = main.c sqlite.c
+# libs
+libs = -lsqlite3
 
-# Build rule
+# main
 all: $(TARGET)
 
 $(TARGET): $(SRC)
-	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC) $(libs)
 
-# Clean rule
+#w Clean rule
 clean:
 	rm -f $(TARGET)
