@@ -9,18 +9,18 @@
  */
 int main(int argc, char *argv[])
 {
-    sqlite();
+    sqliteStart();
     if(argc > 1)
     {
         #ifdef DEBUG
             (void)printf("DEBUG: argument given: %s\n", argv[1]);
-        #endif
+        #endif //DEBUG
 
         if(!giveAnswer(argv[1]))
         {
             #ifdef DEBUG
             (void)printf("DEBUG: answer was completed correctly!\n");
-            #endif
+            #endif //DEBUG
         }
         return 0;
     }
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     (void)printf("Hello from Contactmanager!\n");
     #ifdef DEBUG
         (void)printf("DEBUG: Debug print enabled!\n");
-    #endif
+    #endif //DEBUG
 
     while(true)
     {
@@ -38,19 +38,19 @@ int main(int argc, char *argv[])
         {
             #ifdef DEBUG
                 (void)printf("DEBUG: scan failed!\n");
-            #endif
+            #endif //DEBUG
             return 0;
         }
 
         #ifdef DEBUG
             (void)printf("DEBUG: argument given: %s\n", input);
-        #endif
+        #endif //DEBUG
 
         if(!giveAnswer(input))
         {
             #ifdef DEBUG
             (void)printf("DEBUG: answer was completed correctly!\n");
-            #endif
+            #endif //DEBUG
         }
         else return 0;
     }
@@ -85,7 +85,7 @@ int help(void)
 
     #ifdef DEBUG
         (void)printf("DEBUG: added help\n");
-    #endif
+    #endif //DEBUG
     for(int i=0;i<HELP_LINE;i++) (void)printf("-");
     (void)printf("\n");
     return 0;
