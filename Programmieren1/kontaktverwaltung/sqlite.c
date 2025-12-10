@@ -1,3 +1,7 @@
+/**
+ * COPYRIGHT Benjamin Schmid <inf25189@lehre.dhbw-stuttgart.de>
+ */
+
 #include "sqlite.h"
 
 int mySqlite(int exec){

@@ -1,3 +1,5 @@
+# COPYRIGHT Benjamin Schmid <inf25189@lehre.dhbw-stuttgart.de>
+
 # Compiler
 CC = gcc
 # Compiler flags
