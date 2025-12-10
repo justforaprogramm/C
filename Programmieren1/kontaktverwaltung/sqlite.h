@@ -6,7 +6,7 @@
 
 #ifndef SQLITE
 #define SQLITE
-    int sqliteStart(void);
+    int mySqlite(int exec);
 #endif //SQLITE
 
 /**
@@ -18,3 +18,4 @@
  * private functions in "main.c"
  */
 int openDBHelper(int, sqlite3*);
+int makeTable(void);

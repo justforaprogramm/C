@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-    sqliteStart();
+    mySqlite(0);
     if(argc > 1)
     {
         #ifdef DEBUG
@@ -66,8 +66,8 @@ int giveAnswer(char in[INPUT_BUFFER])
     else if(!strcmp("help", in)) (void)help();
     else if(!strcmp("getContacts", in)) (void)getContacts();
     else if(!strcmp("getContact", in)) (void)getContact();
-    else if(!strcmp("add", in)) (void)add();
-    else if(!strcmp("edit", in)) (void)edit();
+    else if(!strcmp("add", in)) (void)addContact();
+    else if(!strcmp("edit", in)) (void)editContact();
     else if(!strcmp("remove", in)) (void)removeContact();
     else (void)printf("type help for help!\n");
     return exit ? 1 : 0;
@@ -94,7 +94,7 @@ int help(void)
 /**
  * adds a kontakt with info
  */
-int add(void)
+int addContact(void)
 {
     (void)printf("add text\n");
     return 0;
@@ -103,7 +103,7 @@ int add(void)
 /**
  * edit a contact
  */
-int edit(void)
+int editContact(void)
 {
     (void)printf("edit text\n");
     return 0;

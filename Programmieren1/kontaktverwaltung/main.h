@@ -21,8 +21,8 @@
  * private functions in "main.c"
  */
 int help(void);
-int add(void);
-int edit(void);
+int addContact(void);
+int editContact(void);
 int removeContact(void);
 int getContacts(void);
 int getContact(void);
